@@ -3,8 +3,8 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Validasi email dan password sesuai syarat
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!email || !password) {
         alert("Please fill in all fields.");
