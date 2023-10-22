@@ -30,14 +30,15 @@ header {
 #header-center {
   flex: 1;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; 
   align-items: center;
 }
 
 #username {
   padding: 5px;
   font-size: 16px;
-  margin-right: 10px;
+  margin-right: 400px;
+  vertical-align: middle;
 }
 
 #start-game {
@@ -62,8 +63,12 @@ body {
 }
 
 #game-board {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
   width: 100%;
   height: calc(100% - 50px);
@@ -71,15 +76,15 @@ body {
 }
 
 .tile {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   cursor: pointer;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   transition: border-color 0.2s;
 }
 

@@ -82,15 +82,29 @@ function selectTile(tile) {
 
 function endGame() {
   gameStarted = false;
-  document.getElementById("message").textContent = "Game Over";
-  // You can add more logic for game over here
+  document.getElementById("message").textContent = "Time's Up";
+  // Calculate the final score
+  let finalScore = score;
+  if (score > 0) {
+    finalScore -= time; // Deduct time remaining if the player didn't finish
+  } else {
+    finalScore += time; // Add time remaining if the player finished
+  }
+  document.getElementById("score").textContent = finalScore;
+  // Display a pop-up alert with the result
+  alert("Time's Up");
 }
 
 function winGame() {
   gameStarted = false;
-  document.getElementById("message").textContent = "You Win!";
-  // You can add more logic for winning the game here
+  document.getElementById("message").textContent = "You Finished the Game";
+  // Calculate the final score
+  let finalScore = score + time; // Add time remaining for the win
+  document.getElementById("score").textContent = finalScore;
+  // Display a pop-up alert with the result
+  alert("You Finished the Game");
 }
+
 
 document.getElementById("start-game").addEventListener("click", () => {
   const username = document.getElementById("username").value;
