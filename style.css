@@ -1,0 +1,98 @@
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  height: 135px;
+  width: 100%;
+}
+
+#header-left, #header-center, #header-right {
+  display: flex;
+  align-items: center;
+}
+
+#header-left {
+  font-size: 24px;
+}
+
+.emoji {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+#header-center {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#username {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#start-game {
+  font-size: 16px;
+}
+
+#current-user {
+  font-size: 16px;
+}
+
+#header-right {
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding-top: 135px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  margin: 20px;
+  justify-items: center;
+}
+
+.tile {
+  width: 110px;
+  height: 110px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.tile.selected {
+  border-color: #000000;
+}
+
+#hud {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#message {
+  font-size: 20px;
+}
+
+#start-game {
+  font-size: 18px;
+}
